@@ -22,7 +22,7 @@ jobs:
         uses: JamesIves/fetch-api-data-action@releases/v2
         with:
           endpoint: https://api.figma.com/v1/files/RMz009MLDkLZ0HWxXdMaJe/variables/local
-          configuration: '{ "method": "GET", "headers": {"X-FIGMA-TOKEN": "figd_Bv7DsPURk_j5pCUa0u3GjdMz8UAzsckzNK4lCGze"} }'
+          configuration: '{ "method": "GET", "headers": {"X-FIGMA-TOKEN": "${{ secrets.FIGMA_ACCESS_TOKEN }}"} }'
           save-name: figma
 
       - name: Print Figma Data 📦
